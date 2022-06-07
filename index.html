@@ -394,7 +394,12 @@
                 <div class="subscription">
                     <label for="subscription-mail" class="subscription-mail"></label>
                     <input type="email" name="subscription-mail" id="subscription-mail" placeholder="E-mail">
-                    <button class="subscription-btn" type="submit">Подписаться</button>
+                    <button class="subscription-btn" type="submit">
+                        <span class="subscription-btn-txt">Подписаться</span>
+                    <svg class="subscription-send" width="24px" height="24px">
+                        <use href="./images/icons.svg#icon-send"></use>
+                    </svg>
+                    </button>
                 </div>
         </form>
     </div>
@@ -411,23 +416,35 @@
             <div class="form-field">
                 <label for="user-name" class="form-label">Имя</label>
                 <input type="text" name="user-name" id="user-name" class="form-input">
+                <svg class="icon-name" width="18px" height="18px">
+                    <use href="./images/icons.svg#icon-person"></use>
+                </svg>
             </div>
             <div class="form-field">
                 <label for="user-tel" class="form-label">Телефон</label>
-                <input type="tel" name="user-tel" id="user-tel">
+                <input type="tel" name="user-tel" id="user-tel" class="form-input">
+                <svg class="icon-name" width="18px" height="18px">
+                    <use href="./images/icons.svg#icon-phone"></use>
+                </svg>
             </div>
             <div class="form-field">
                 <label for="user-mail" class="form-label">Почта</label>
-                <input type="email" name="user-mail" id="user-mail">
+                <input type="email" name="user-mail" id="user-mail" class="form-input">
+                <svg class="icon-name" width="18px" height="18px">
+                    <use href="./images/icons.svg#icon-email"></use>
+                </svg>
             </div>
             <div class="form-field comment">
                 <label for="user-comment" class="form-label">Комментарий</label>
                 <textarea name="comment" id="user-comment" rows="10" placeholder="Введите текст"></textarea>
             </div>
             <div class="form-agreement">
-                <input type="checkbox" name="agreement" id="user-agreement">
-                <label for="user-agreement">Соглашаюсь с рассылкой и принимаю
+                <label class="label-agreement" for="user-agreement">
+                    <input class="checkbox" type="checkbox" name="agreement" id="user-agreement">
+                    <span class="icon-agreement"></span>
+                    <span class="text-agreement">Соглашаюсь с рассылкой и принимаю
                     <a class="agreement-link" href="">Условия договора</a>
+                    </span>
                 </label>
             </div>
             <button class="modal-btn-close" type="submit">Отправить</button>
