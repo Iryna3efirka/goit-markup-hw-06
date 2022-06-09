@@ -1,3 +1,23 @@
+body {
+    font-family: var(--main-font);
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+    padding: 0;
+    margin: 0;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 :root {
     --main-font: 'Roboto', sans-serif;
     --secondary-font: 'Raleway', sans-serif;
@@ -11,26 +31,14 @@
 .link {
     text-decoration: none;
 }
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ul {
-    padding: 0;
-    margin: 0;
-}
-body {
-    font-family: var(--main-font);
-}
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
 
+
+/* HEADER */
+
+
+.header {
+    border-bottom: 1px solid #ECECEC;
+}
 .container {
     width: 1200px;
     padding-left: 15px;
@@ -38,25 +46,13 @@ img {
     margin-left: auto;
     margin-right: auto;
 }
-
-/* HEADER */
-
-.header {
-    border-bottom: 1px solid #ECECEC;
-}
-
-.header-container {
+.header__container {
     display: flex;
     align-items: center;
 }
-.header-navigation {
+.header__navigation {
     display: flex;
     align-items: center;
-}
-.header .logo {
-    margin-right: 93px;
-    padding-top: 24px;
-    padding-bottom: 25px;
 }
 .logo {
     font-family: var(--secondary-font);
@@ -66,20 +62,24 @@ img {
     letter-spacing: 0.03em;
     color: var(--accent-color);
 }
-.logo-studio-1 {
+.header__logo {
+    margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+}
+.header__span {
     color: #000000;
 }
-
 .menu {
     display: flex;
 }
-.menu-item {
+.menu__item {
     margin-right: 50px;
 }
-.menu-item:last-child {
+.menu__item:last-child {
     margin-right: 0;
 }
-.menu-link {
+.menu__link {
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -92,15 +92,19 @@ img {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);  
 }
-.menu-link:hover,
-.menu-link:focus {
+.menu__link:hover,
+.menu__link:focus {
     color: var(--accent-color);
 }
-.menu .link.current {
+/* .menu .link.current {
     color: var(--accent-color);
 }
-.menu-link.current {
+.menu__link.current {
     position: relative;
+} */
+.menu__link--current {
+    position: relative;
+    color: var(--accent-color);
 }
 .current::after {
     content: "";
@@ -117,10 +121,10 @@ img {
     display: flex;
     margin-left: auto;
 }
-.contact-menu + .contact-menu{
+.contact__menu + .contact__menu{
     margin-left: 50px;
 }
-.header-contact {
+.contact__link {
     display: flex;
     align-items: center;
     padding-top: 32px;
@@ -134,16 +138,18 @@ img {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.icon-contact {
+.contact__link:hover,
+.contact__link:focus {
+    color: var(--accent-color);
+}
+.contact__icon {
     margin-right: 10px;
     fill: currentColor;
 }
-.header-contact:hover,
-.header-contact:focus {
-    color: var(--accent-color);
-}
+
 
 /* HERO */
+
 
 .hero {
     padding-top: 200px;
@@ -201,24 +207,25 @@ img {
     background-color: #188CE8;
 }
 
+
 /* SERVICES*/
 
-.services {
+
+.features {
     margin-top: 0;
     padding-top: 94px;
 }
-
-.services-list {
+.features__list {
     display: flex;
 }
-.services-list-item {
+.features__item {
     width: 270px;
     margin-right: 30px;
 }
-.services-list-item:last-child {
+.features__item:last-child {
     margin-right: 0;
 }
-.services-list-item::before {
+.features__item::before {
     display: block;
     content: "";
     height: 120px;
@@ -228,19 +235,19 @@ img {
     background-color: #F5F4FA;
     background-size: 70px;
 }
-.services-list-item:nth-child(1)::before {
+.features__item:nth-child(1)::before {
     background-image: url(../images/peculiarities/antenna_1.svg);
 }
-.services-list-item:nth-child(2)::before {
+.features__item:nth-child(2)::before {
     background-image: url(../images/peculiarities/clock_1.svg);
 }
-.services-list-item:nth-child(3)::before {
+.features__item:nth-child(3)::before {
     background-image: url(../images/peculiarities/diagram_1.svg);
 }
-.services-list-item:nth-child(4)::before {
+.features__item:nth-child(4)::before {
     background-image: url(../images/peculiarities/astronaut_1.svg);
 }
-.service-title {
+.features__title {
     margin-top: 30px;
     margin-bottom: 10px;
     font-weight: 700;
@@ -258,7 +265,10 @@ img {
     letter-spacing: 0.03em;
     color: #757575;
 }
+
+
 /* ABOUT-GALLERY */
+
 
 .about-gallery {
     margin-top: 0;
